@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Test Images</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <main>
+      <div
+        style="
+          max-width: 1500px;
+          margin-left: auto;
+          margin-right: auto;
+          display: grid;
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          column-gap: 8px;
+        "
+      >
+        <div style="grid-column-start: span 12">
+          <h1>Image Accessibility Test Page</h1>
+          <p>
+            This page contains various images to test accessibility features.
+          </p>
+        </div>
+        <div style="grid-column-start: span 12">
+          <h2>Images using &lt;img&gt; tag</h2>
+        </div>
+        <figure style="grid-column-start: span 3">
+          <img
+            src="images/samsung-unsplash.jpg"
+            alt="Image of smartphone with memory cards."
+            style="width: 100%; height: auto"
+          />
+          <figcaption>image 1</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <img
+            src="images/samsung-unsplash.jpg"
+            style="width: 100%; height: auto"
+          />
+          <figcaption>image 2</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <img
+            src="images/samsung-unsplash.jpg"
+            style="width: 100%; height: auto"
+            alt="An example image showing a beautiful landscape with mountains and a lake."
+          />
+          <figcaption>image 3</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <img
+            src="images/samsung-unsplash.jpg"
+            style="width: 100%; height: auto"
+            alt=""
+          />
+          <figcaption>image 4</figcaption>
+        </figure>
+
+        <div style="grid-column-start: span 12">
+          <h2>Active Images</h2>
+        </div>
+        <figure style="grid-column-start: span 3">
+          <a href="home.html">
+            <img
+              src="images/cube-unsplash.jpg"
+              alt="Go to Cube Corp home page."
+              style="width: 100%; height: auto"
+          /></a>
+          <figcaption>Image 1</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <a href="home.html">
+            <img
+              src="images/cube-unsplash.jpg"
+              style="width: 100%; height: auto"
+              alt=""
+          /></a>
+          <figcaption>Image 2</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <a href="home.html">
+            <img
+              src="images/cube-unsplash.jpg"
+              style="width: 100%; height: auto"
+          /></a>
+          <figcaption>Image 3</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <a href="home.html">
+            <img
+              src="images/cube-unsplash.jpg"
+              style="width: 100%; height: auto"
+              alt="Rainbow cube"
+          /></a>
+          <figcaption>Image 4</figcaption>
+        </figure>
+
+        <div style="grid-column-start: span 12">
+          <h2>Input Images</h2>
+        </div>
+        <figure style="grid-column-start: span 3">
+          <input
+            type="image"
+            src="images/search-unsplash.png"
+            alt="Search"
+            style="width: 2rem; height: 2rem"
+          />
+          <figcaption>Image 1</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <input
+            type="image"
+            src="images/search-unsplash.png"
+            alt="Black and white magnifying glass"
+            style="width: 2rem; height: 2rem"
+          />
+          <figcaption>Image 2</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <input
+            type="image"
+            src="images/search-unsplash.png"
+            style="width: 2rem; height: 2rem"
+            alt=""
+          />
+          <figcaption>Image 3</figcaption>
+        </figure>
+
+        <div style="grid-column-start: span 12">
+          <h2>SVG Images</h2>
+        </div>
+        <figure style="grid-column-start: span 3">
+          <svg role="img" width="100" height="100">
+            <title>Red Circle</title>
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="black"
+              stroke-width="4"
+              fill="red"
+            />
+          </svg>
+          <figcaption>Image 1</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <svg role="img" width="100" height="100">
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="black"
+              stroke-width="4"
+              fill="red"
+            />
+          </svg>
+          <figcaption>Image 2</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <svg role="img" width="100" height="100">
+            <title>Blue Square</title>
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="black"
+              stroke-width="4"
+              fill="red"
+            />
+          </svg>
+          <figcaption>Image 3</figcaption>
+        </figure>
+
+        <div style="grid-column-start: span 12">
+          <h2>Canvas</h2>
+        </div>
+        <figure style="grid-column-start: span 3">
+          <canvas
+            id="canvas1"
+            width="200"
+            height="100"
+            style="border: 1px solid #000000"
+            role="img"
+            aria-label="A circle with black outline."
+          >
+            <script>
+              var c = document.getElementById("canvas1");
+              var ctx = c.getContext("2d");
+              ctx.beginPath();
+              ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+              ctx.stroke();
+            </script>
+          </canvas>
+          <figcaption>Image 1</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <canvas
+            id="canvas2"
+            width="200"
+            height="100"
+            style="border: 1px solid #000000"
+          >
+            <script>
+              var c = document.getElementById("canvas2");
+              var ctx = c.getContext("2d");
+              ctx.beginPath();
+              ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+              ctx.stroke();
+            </script>
+          </canvas>
+        </figure>
+
+        <div style="grid-column-start: span 12">
+          <h2>Object tag</h2>
+        </div>
+        <figure style="grid-column-start: span 3">
+          <object
+            data="images/cube-unsplash.jpg"
+            width="100"
+            height="100"
+            aria-label="Rainbow cube"
+          ></object>
+          <figcaption>Image 1</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <object
+            data="images/cube-unsplash.jpg"
+            width="100"
+            height="100"
+          ></object>
+          <figcaption>Image 2</figcaption>
+        </figure>
+        <figure style="grid-column-start: span 3">
+          <object
+            data="images/cube-unsplash.jpg"
+            width="100"
+            height="100"
+            aria-label="Rainbow circle"
+          ></object>
+          <figcaption>Image 3</figcaption>
+        </figure>
+
+        <div style="grid-column-start: span 6">
+          <h2>Complex Image</h2>
+          <img
+            src="images/water-cycle-picryl.jpg"
+            alt="A detailed diagram of the water cycle."
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div style="grid-column-start: span 12"><h2>Background images</h2></div>
+        <div
+          style="
+            grid-column-start: span 3;
+            width: 100%;
+            height: 200px;
+            background-image: url('images/samsung-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+          role="img"
+          aria-label="Image of smartphone with memory cards."
+        ></div>
+
+        <div
+          style="
+            grid-column-start: span 3;
+            width: 100%;
+            height: 200px;
+            background-image: url('images/samsung-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+      </div>
+    </main>
+  </body>
+</html>
